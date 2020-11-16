@@ -1,0 +1,96 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    char package;
+    float hours, payMon, addWork, subBill, totalBill;
+    cout << "Enter package number (A, B, C): ";
+    cin >> package;
+    
+    
+        switch (package){
+            case 'a'://package A
+            case 'A':
+            cout << "Enter how many hours were used: ";
+            cin >> hours;
+            if (hours >= 0 && hours <= 744){
+                if (hours > 10){
+                    subBill= hours - 10;
+                    addWork = 2.00;
+                    payMon = 9.95,
+                    subBill = subBill * addWork;
+                    totalBill = subBill + payMon;
+                    cout << fixed << showpoint << setprecision(2) << "Total amount: " << totalBill << " $" <<endl;
+                }
+                else {
+                    payMon = 9.95;
+                    cout << fixed << showpoint << setprecision(2) << "Total amount: " << payMon << " $" <<endl;
+                }
+                
+            }
+            else if (hours < 0){
+                cout << "Error: the number of hours should be a positive value!" <<endl;
+            }
+            
+            else if (hours > 744){
+                cout << "Error: the number of hours should be equal or less than 744!" << endl;
+            }
+            break;
+            
+            case 'b'://package B
+            case 'B':
+            cout << "Enter how many hours were used: ";
+            cin >> hours;
+            if (hours >= 0 && hours <= 744){
+                if (hours > 20){
+                    subBill= hours - 20;
+                    addWork = 1.00;
+                    payMon = 14.95,
+                    subBill = subBill * addWork;
+                    totalBill = subBill + payMon;
+                    cout << fixed << showpoint << setprecision(2) << "Total amount: " << totalBill << " $" <<endl;
+                }
+                else {
+                    payMon = 14.95;
+                    cout << fixed << showpoint << setprecision(2) << "Total amount: " << payMon << " $" <<endl;
+                }
+                
+            }
+            else if (hours < 0){
+                cout << "Error: the number of hours should be a positive value!" <<endl;
+            }
+            
+            else if (hours > 744){
+                cout << "Error: the number of hours should be equal or less than 744!" << endl;
+            }
+            break;
+            
+            case 'c'://package c
+            case 'C':
+            cout << "Enter how many hours were used: ";
+            cin >> hours;
+            if (hours >= 0 && hours <= 744){
+                
+                    payMon = 19.95;
+                    cout << fixed << showpoint << setprecision(2) << "Total amount: " << payMon << " $" <<endl;
+                
+                
+            }
+            else if (hours < 0){
+                cout << "Error: the number of hours should be a positive value!" <<endl;
+            }
+            
+            else if (hours > 744){
+                cout << "Error: the number of hours should be equal or less than 744!" << endl;
+            }
+            break;
+        
+            
+            default:
+            cout << "Wrong package!";
+        
+        }
+
+    return 0;
+}
