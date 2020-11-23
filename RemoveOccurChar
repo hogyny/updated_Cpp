@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+void show(char a[], char b){
+    int i;
+    string z;
+    for (  i = 0 ; i < strlen(a); i++ ){
+        if (a[i] == b){
+            continue;
+        }
+        else{
+            z = z + a[i];
+            
+        }
+    }
+    cout << "Result: " << z;
+}
+
+int main(){
+    char word[100];
+    char let;
+    cout << "Enter word: ";
+    cin >> word;
+    cout << "Enter character: ";
+    cin >> let;
+    show(word, let);
+    
+    
+
+    return 0;
+}
